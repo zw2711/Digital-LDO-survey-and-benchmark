@@ -1,0 +1,43 @@
+Digital Low-Dropout Voltage Regulator Performance Survey Since 2010,,,,,,,,,,,,
+Columbia University,,,,,,,,,,,,
+,,,,,,,,,,,,
+Definitions of metrics,,,,,,,,,,,,
+Metric,Definition,,,,,,,,,,,Commonly-used symbol
+Technology node,Fabrication process infomation,,,,,,,,,,,
+Output capacitor capacity [nF],Output capacitor capacity,,,,,,,,,,,Cout
+Active area [mm^2],Total silicon area excluding output capacitor(s) area,,,,,,,,,,,-
+Active & passive area [mm^2],Total silicon area including on-chip output capacitor(s) area (designs with off-chip capacitor are exclueded),,,,,,,,,,,-
+Input voltage [V],Supply voltage to an LDO (used in dynamic load regulation test),,,,,,,,,,,Vin
+Output voltage [V],Output voltage of an LDO (used in dynamic load regulation test),,,,,,,,,,,Vout
+Output reference voltage [V],The set point of the output voltage of an LDO,,,,,,,,,,,Vref
+Dropout voltage [V],Vin-Vout,,,,,,,,,,,Vdropout
+Voltage droop [V],Vout's maximum downward deviation from output reference voltage (Vref) when the load current changes by its maximum (tested) load current change (?Iload),,,,,,,,,,,Vdroop
+Voltage overshoot [V],Vout's maximum upward deviation from output reference voltage (Vref) when the load current changes by its maximum (tested) load current change (?Iload),,,,,,,,,,,Vovershoot
+Max load current [mA],Maximum load current that an LDO can support under the output voltage error (Verror) constraints,,,,,,,,,,,"Iload,max"
+Min load current [mA],Minimum load current that an LDO can support under the output voltage error (Verror) constraints,,,,,,,,,,,"Iload,min"
+Max (tested) load current change (droop) [mA],Maxium tested load current change for voltage droop,,,,,,,,,,,"dIload,max,droop"
+Max (tested) load current change (overshoot) [mA],Maxium tested load current change for voltage overshoot,,,,,,,,,,,"dIload,max,overshoot"
+Edge time [ns],Time for the max (tested) load current change ,,,,,,,,,,,tedge
+Settling time (droop) [ns],Time to take for Vout to settle within less than a small % of Vref for voltage droop,,,,,,,,,,,"tsettle,droop"
+Settling time (overshoot) [ns],Time to take for Vout to settle within less than a small % of Vref for voltage overshoot,,,,,,,,,,,"tsettle,overshoot"
+Quiescent current [uA],Current draw of an LDO when it supports steady-state load current,,,,,,,,,,,Iq
+Peak current efficiency ,"Iload,max/(Iload,max+Iq)",,,,,,,,,,,CEpeak
+Peak power efficiency,"(Vout*Iload,max)/(Vin*(Iload,max+Iq))",,,,,,,,,,,PEpeak
+PSRR [dB],"The ratio of output voltage change to input voltage change, 20*log(dVout/dVin)",,,,,,,,,,,PSRR
+Power-FET unit current [nA],Unit current in the power-FET array,,,,,,,,,,,Iu
+Output ripple voltage,Output ripple size,,,,,,,,,,,Vripple
+Output voltage deadzone [mV],A voltage range where controller does not update its output,,,,,,,,,,,Vdz
+Output voltage error [mV],Maximum output voltage deviation from Vref in the steady-state load and line condition. Typically larger of Vripple/2 or Vdz/2,,,,,,,,,,,Verror
+Output voltage temperature coefficient,Output voltage drift over temperature variation,,,,,,,,,,,TC
+Current Density [mA/mm^2],Max load current/Active & passive area,,,,,,,,,,,current density
+Load-regulation FoM 1 [ps],"([Cout*dVout]/dIload)*[Iq/dIload], smaller FoM is better",,,,,,,,,,,ps-FoM
+Load-regulation FoM 2 [pF],"[dVout/(Vout*dIload)]*(Cout*Iq), smaller FoM is better",,,,,,,,,,,pF-FoM
+Load-regulation FoM 3 [edge-adj ps],"([Cout*dVout]/dIload+0.5*Tedge)*[Iq/dIload], smaller FoM is better",,,,,,,,,,,edge-adj ps-FoM
+Load-regulation FoM 4 [pC],"([Cout*dVout]/dIload+0.5*Tedge)*Iq, smaller FoM is better",,,,,,,,,,,pC-FoM
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+*Please contact to report any errors:,,,,,,,,,,,,
+Zhaoqing Wang: zw2711@columbia.edu,,,,,,,,,,,,
+Sung Justin Kim: sjk2206@columbia.edu,,,,,,,,,,,,
+Mingoo Seok: ms4415@columbia.edu,,,,,,,,,,,,
